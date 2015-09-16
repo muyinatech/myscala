@@ -1,16 +1,20 @@
-/**
- * Created by Tosin on 10/02/14.
- */
-
 val numNames = Array("zero", "one", "two") // type Array[String] is inferred
 val fruit = List("apples", "oranges", "pears", "bananas", "pineapples") // type List[String] is inferred, immutable linked list
 println(fruit) // print list
+println(fruit.size)
+println(fruit(1)) // oranges
 println("Head of the list: " + fruit.head) // print head of the list
 println("Tail of the list: " + fruit.tail) // print tail (rest of the list except the first element) of the list
 println("The list is empty?: " + fruit.isEmpty) // is list empty
 println("List length: " + List(1,2,3).length)
 println("Reverse list: " + fruit.reverse)
 printf("Indices of the list: " + fruit.indices)
+for(i <- fruit) { println(fruit)}
+print("numNames: ")
+numNames.foreach( (c: String) => print(c + " "))
+println()
+val sizes = numNames.map((c: String) => c.size)
+for(i <- sizes) { println(i)}
 
 println("Take first 2 elements: " + (fruit take 2))
 println("Take except the first 2 elements: " + (fruit drop 2))
@@ -56,3 +60,6 @@ println(abcde mkString ("[", "," ,"]")) // with prefix string, separator string,
 println(abcde mkString "") // no strings in between elements
 
 val arr = abcde.toArray // convert list to an array
+
+val numbers = List(32, 95, 24, 21, 17)
+println(numbers.reduce((a: Int, b: Int) => a + b))
