@@ -1,5 +1,4 @@
 object MyTuple {
-
   def main(args: Array[String]) {
     val info = (5, "Korben", true)
     println(info._2) // Korben
@@ -11,5 +10,4 @@ object MyTuple {
     val reversed = red._2 -> red._1
     println(reversed)
   }
-
 }
