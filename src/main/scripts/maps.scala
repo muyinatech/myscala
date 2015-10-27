@@ -4,3 +4,7 @@ println(colourMap.contains("green"))
 
 println("Pairs:")
 for (pairs <- colourMap) {println(pairs)}
+
+// convert a map to a list
+println(Map("a" -> 1, "b" -> 2).toList);
+
