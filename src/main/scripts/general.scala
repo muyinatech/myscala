@@ -1,11 +1,11 @@
 val msg = "Hello World" // val once initialized, it cannot be reassigned, also the type String is inferred by the sting literal
-println("msg: " + msg)
+println(msg)
 
 var greeting = "Hello, World"
-println("greeting: " + greeting)
+println(greeting)
 
 greeting = "Hello World Part 2" // var can be reassigned
-println("greeting: " + greeting)
+println(greeting)
 
 val word1 = "from" // optional type, then type inference
 val word2: String = "to" // explicit type
