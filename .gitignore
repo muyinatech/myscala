@@ -2,9 +2,5 @@
 .idea/
 *.iml
 
-#Misc
+#SBT
 target/
-project/target/
-
-#Git
-.git/

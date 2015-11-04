@@ -1,5 +1,6 @@
 package muyinatech.myscala
 
+// A class and its companion object can access each other's private members
 
 // class with companion object
 object DBConnection {

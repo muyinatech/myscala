@@ -99,3 +99,31 @@ println(s"c: $c")
 // val (myVar1: Int, myVar2: String) = Pair(40, "Foo")
 val (myVar1, myVar2) = Pair(40, "Foo")
 
+println(
+  """This is
+    |is a multline
+    |message.
+  """.stripMargin) // strip margin to remove leading spaces
+
+// symbol literal
+val s = 'aSymbol // sames Symbol("aSymbol")
+println(s.name)
+
+val sum = 1 + 2 // (1).+(2)
+
+// Methods being called in operator notation
+val hello = "Hello World"
+println(hello indexOf 'o') // hello.indexOf('o') (infix operator notation)
+println(hello indexOf ('o', 5)) // brackets required due to multiple arguments
+
+val seven = 7 toLong // (7).toLong postfix operator notation, they don't have parameters hence no need for brackets
+
+val minusTwo = -2.0 // (2.0).unary_- prefix operator notation
+
+println(1 != 2)
+println(List(1,2,3) == List(1,2,3)) // object equality
+println(1 == 1.0)
+
+
+
+
