@@ -1,5 +1,5 @@
 class Car(val make: String, var reserved: Boolean) {
-  def reserve(r: Boolean): Unit = {
+  def reserve(r: Boolean) {
     reserved = r
   }
 }
