@@ -1,3 +1,5 @@
+import scala.io.Source
+
 // input-less function
 def function1 = "hi"
 
@@ -100,14 +102,13 @@ println(maximize(50,30))
 
 // no args function
 def logStart() = "=" * 50 + "\nStarting NOW\n" + "=" * 50
+
+
 // no args function literal
 val start: () => String = logStart
 println(start())
 
-// function literal
-val greeter = (name: String) => s"Hello, $name"
-val greeterCopy = greeter("World")
-println(greeterCopy)
+
 
 def safeStringOp(s: String, f: String => String) = {
   if (s != null) f(s) else s
@@ -169,3 +170,16 @@ val timedUUID = safeStringOp2(uuid) { s =>
   timed.toUpperCase
 }
 println(timedUUID)
+
+
+// nested function
+def processFile(filename: String, width: Int) {
+  def processLine(line: String) { // nested/local function
+    if (line.length > width) // has access to the parameter of the enclosing function
+      println(filename + ": " +  line)
+  }
+
+  val source = Source.fromFile(filename)
+  for (line <- source.getLines())
+    processLine(line)
+}
